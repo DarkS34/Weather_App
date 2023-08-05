@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
-import "./WeatherTimeIntervalLayout.css"
+import "./WeatherTimeIntervalLayout.css";
 
 const WeatherTimeIntervalOptions = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/weather-now/here");
+    navigate("weather-now");
+    return console.log("geak")
   }, []);
 
   return (

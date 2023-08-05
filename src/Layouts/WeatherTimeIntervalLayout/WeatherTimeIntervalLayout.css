@@ -1,3 +1,10 @@
+:root {
+  --primary-color: rgb(240, 240, 240);
+  --primary-color-shadow: rgba(240, 240, 240, 0.9);
+  --secondary-orange: rgb(224, 128, 55);
+  --secondary-orange-shadow: rgba(224, 128, 55, 0.75);
+}
+
 #site-header {
   width: 100%;
   display: flex;
@@ -7,7 +14,7 @@
 
 .site-title {
   font-weight: 700;
-  filter: drop-shadow(5px 0 0 rgba(144, 100, 226, 0.75));
+  filter: drop-shadow(4px 1px 0 var(--secondary-orange-shadow));
   font-size: 3rem;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -25,39 +32,38 @@
   padding: 10px 20px;
   border-radius: 30px;
   border: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  background-color: var(--primary-color-shadow);
   letter-spacing: 1.5px;
   font-size: 12px;
   transition: all 0.5s ease;
   font-weight: 500;
-  color: rgba(144, 100, 226, 0.75);
+  color: var(--secondary-orange);
   height: fit-content;
 }
 
 .time-opt-navlink:hover {
+  background-color: var(--secondary-orange-shadow);
+  color: var(--primary-color);
   letter-spacing: 2px;
-  background-color: rgba(144, 100, 226, 0.75);
-  color: hsl(0, 0%, 100%);
-}
-
-.time-opt-navlink.active:hover {
-  letter-spacing: 1.5px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: rgba(144, 100, 226, 0.75);
-  box-shadow: 2px 5px 0 rgba(144, 100, 226, 0.75);
-}
-
-.time-opt-navlink:active {
-  letter-spacing: 2.5px;
-  color: hsl(0, 0%, 100%);
-  box-shadow: rgb(144, 100, 226, 0.75) 0px 0px 0px 0px;
-  transform: translateY(8px);
-  transition: 100ms;
 }
 
 .time-opt-navlink.active {
   font-size: 14px;
   font-weight: 700;
-  box-shadow: 2px 5px 0 0 rgba(144, 100, 226, 0.75);
+  box-shadow: 2px 5px 0 0 var(--secondary-orange-shadow);
+}
+
+.time-opt-navlink.active:hover {
+  letter-spacing: 1.5px;
+  background-color: var(--primary-color-shadow);
+  color: var(--secondary-orange);
+  box-shadow: 2px 5px 0 var(--secondary-orange-shadow);
+}
+
+.time-opt-navlink:active {
+  letter-spacing: 2.5px;
+  color: var(--primary-color);
+  box-shadow: none;
+  transform: translateY(10px);
+  transition: 0.1s;
 }

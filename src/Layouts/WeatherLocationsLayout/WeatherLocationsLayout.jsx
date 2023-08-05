@@ -1,7 +1,15 @@
-import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import "./WeatherLocationsLayout.css"
+import React, { useEffect } from "react";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
+
+import "./WeatherLocationsLayout.css";
+
 const WeatherLocationsLayout = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("here");
+  }, []);
+
   return (
     <>
       <nav className="location-selection-container">
@@ -12,7 +20,6 @@ const WeatherLocationsLayout = () => {
           Other Cities
         </NavLink>
       </nav>
-
       <main className="site-main">
         <Outlet />
       </main>
