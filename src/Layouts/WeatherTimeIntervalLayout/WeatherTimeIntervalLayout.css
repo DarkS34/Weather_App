@@ -1,8 +1,8 @@
 :root {
   --primary-color: rgb(240, 240, 240);
   --primary-color-shadow: rgba(240, 240, 240, 0.9);
-  --secondary-orange: rgb(224, 128, 55);
-  --secondary-orange-shadow: rgba(224, 128, 55, 0.75);
+  --secondary-orange: rgb(213, 122, 53);
+  --secondary-orange-shadow: rgba(213, 122, 53, 0.75);
 }
 
 #site-header {
@@ -22,7 +22,7 @@
 
 .navbar {
   height: 50px;
-  width: 60%;
+  width: 360px;
   display: flex;
   margin-bottom: 1rem;
   justify-content: space-between;

@@ -3,7 +3,7 @@
   justify-content: space-evenly;
   margin: 0;
   margin-bottom: 1.5rem;
-  width: 50%;
+  width: 300px;
 }
 
 .location-opt-navlink {
@@ -24,9 +24,9 @@
 }
 
 .site-main {
-  width: 600px;
+  min-width: fit-content;
   display: flex;
   flex-direction: column;
   min-height: 640px;
+  align-items: center;
 }
-

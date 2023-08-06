@@ -1,10 +1,18 @@
+:root {
+  --primary-color: rgb(240, 240, 240);
+  --primary-color-shadow: rgba(240, 240, 240, 0.9);
+  --secondary-orange: rgb(213, 122, 53);
+  --secondary-orange-shadow: rgba(213, 122, 53, 0.75);
+  --background-card: rgba(83, 83, 83, 0.6);
+}
+
 .weather-today-container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   animation: scale-up 0.4s ease-out forwards;
+  width: 500px;
 }
 
 .weather-today-card {
@@ -16,15 +24,10 @@
   justify-content: space-between;
   padding: 20px;
   border-radius: 10px;
-  background-color: rgba(65, 65, 65);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  width: 500px;
+  background-color: var(--background-card);
+  backdrop-filter: blur(10px);
+  width: 100%;
   transition: all 0.3s ease-in-out;
-  
-}
-
-.weather-today-card:hover {
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .date-time-container {
@@ -40,7 +43,7 @@
   letter-spacing: 1px;
 }
 
-.basic-info{
+.basic-info {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -48,11 +51,11 @@
   border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
 }
 
-.weather-img{
-  filter: drop-shadow(0 0 10px rgb(200,200,200,0.5));
+.weather-img {
+  filter: drop-shadow(0 0 10px rgb(200, 200, 200, 0.5));
 }
 
-.city-description-temp-container{
+.city-description-temp-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -72,28 +75,29 @@
   font-size: 0.7em;
   letter-spacing: 1.2px;
   color: rgb(197, 197, 197);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-.temp-container{
+.temp-container {
   display: flex;
   align-items: start;
+  color: var(--secondary-orange);
 }
 
 .temp {
   font-size: 2rem;
 }
 
-.degree{
+.degree {
   font-size: 1rem;
   font-weight: 300;
-  margin-left: .25rem;
+  margin-left: 0.25rem;
 }
 
 .weather-now-details {
   width: 100%;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin-block-start: 2rem;
   flex-wrap: wrap;
 }
@@ -108,7 +112,7 @@
 
 .details-description {
   font-weight: 700;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin-bottom: 0.25rem;
 }
 
@@ -130,5 +134,11 @@
   }
   100% {
     scale: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .weather-today-container {
+    width: 400px;
   }
 }

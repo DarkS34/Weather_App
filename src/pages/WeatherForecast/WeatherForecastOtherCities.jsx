@@ -30,14 +30,16 @@ const WeatherForecastOtherCities = () => {
 
   return (
     <>
-      <label htmlFor="cities"> Select a city: </label>
-      <select name="cities" id="cities" onChange={handleSelectChange}>
-        {citiesToSearch.map((city) => (
-          <option key={city} value={city}>
-            {city}
-          </option>
-        ))}
-      </select>
+      <label className="select-cities" htmlFor="cities">
+        Select a city:
+        <select name="cities" id="cities" onChange={handleSelectChange}>
+          {citiesToSearch.map((city) => (
+            <option key={city} value={city}>
+              {city}
+            </option>
+          ))}
+        </select>
+      </label>
       <div>
         {error ? (
           <p>{error}</p>

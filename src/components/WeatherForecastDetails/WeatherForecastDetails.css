@@ -1,0 +1,136 @@
+:root {
+  --primary-color: rgb(240, 240, 240);
+  --primary-color-shadow: rgba(240, 240, 240, 0.9);
+  --secondary-orange: rgb(213, 122, 53);
+  --secondary-orange-shadow: rgba(213, 122, 53, 0.75);
+  --background-card: rgba(83, 83, 83, 0.6);
+}
+
+.forecast-days-container {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  gap: 1rem;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.day-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--background-card);
+  border-radius: 5px;
+  align-items: center;
+  width: 150px;
+  height: fit-content;
+}
+
+.forecast-basic-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forecast-date {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.forecast-time {
+  font-size: 0.75rem;
+  letter-spacing: 1.25px;
+}
+
+.forecast-temp-img {
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 10px rgb(200, 200, 200, 0.5));
+}
+
+.forecast-weather-description {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.forecast-temp-container {
+  display: flex;
+  color: var(--secondary-orange);
+}
+
+.forecast-temp {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.forecast-degree {
+  margin-left: 0.25rem;
+  font-weight: 300;
+}
+
+.forecast-details-container {
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.forecast-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day-container:nth-child(1) {
+  animation: scale-up 0.2s ease-out 0.1s both;
+}
+
+.day-container:nth-child(2) {
+  animation: scale-up 0.2s ease-out 0.2s both;
+}
+
+.day-container:nth-child(3) {
+  animation: scale-up 0.2s ease-out 0.3s both;
+}
+
+.day-container:nth-child(4) {
+  animation: scale-up 0.2s ease-out 0.4s both;
+}
+
+.day-container:nth-child(5) {
+  animation: scale-up 0.2s ease-out 0.5s both;
+}
+
+@keyframes scale-up {
+  0% {
+    scale: 0;
+  }
+  80% {
+    scale: 105%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .forecast-days-container {
+    flex-direction: column;
+  }
+  .day-container {
+    flex-direction: row;
+    width: 350px;
+  }
+  .forecast-temp-img {
+    margin: 0;
+  }
+  .forecast-details-container {
+    border-top: none;
+    border-left: 1px dashed rgba(255, 255, 255, 0.2);
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 1.5rem;
+  }
+}

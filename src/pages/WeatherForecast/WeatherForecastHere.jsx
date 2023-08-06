@@ -25,7 +25,7 @@ const WeatherForecastHere = () => {
   }, [location]);
 
   return (
-    <div>
+    <>
       {!location ? (
         <div className="loading-container">
           <Loading />
@@ -39,7 +39,7 @@ const WeatherForecastHere = () => {
       ) : (
         <WeatherForecastDetails data={weatherData} />
       )}
-    </div>
+    </>
   );
 };
 
