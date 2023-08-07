@@ -8,7 +8,6 @@ const WeatherTimeIntervalOptions = () => {
 
   useEffect(() => {
     navigate("weather-now");
-    return console.log("geak")
   }, []);
 
   return (

@@ -141,4 +141,11 @@
   .weather-today-container {
     width: 400px;
   }
+  .weather-now-details{
+    justify-content: space-evenly;
+  }
+
+  .details-container{
+    margin-inline: 0.75rem;
+  }
 }
