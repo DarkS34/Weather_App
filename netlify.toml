@@ -2,3 +2,13 @@
 from = "/*"
 to = "/index.html"
 status = 200
+
+[[redirects]]
+from = "/weather-now"
+to = "/weather-now/here"
+status = 200
+
+[[redirects]]
+from = "/weather-forecast"
+to = "/weather-forecast/here"
+status = 200

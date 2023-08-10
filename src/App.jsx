@@ -17,7 +17,7 @@ const LazyWeatherForecastOtherCities = lazy(() =>
   import("./pages/WeatherForecast/WeatherForecastOtherCities")
 );
 
-const LazyNotFound = lazy(() => import("./pages/404"));
+const LazyNotFound = lazy(() => import("./pages/NotFound"));
 
 import "./App.css";
 

@@ -27,6 +27,6 @@
   min-width: fit-content;
   display: flex;
   flex-direction: column;
-  min-height: 540px;
+  height: fit-content;
   align-items: center;
 }

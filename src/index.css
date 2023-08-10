@@ -5,10 +5,10 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: radial-gradient(
-    circle,
-    rgb(190, 190, 190) 0%,
-    rgb(213, 122, 53) 100%
+  background: linear-gradient(
+    180deg,
+    rgb(192, 156, 122) 0%,
+    rgb(202, 134, 70) 100%
   );
 
   font-synthesis: none;
