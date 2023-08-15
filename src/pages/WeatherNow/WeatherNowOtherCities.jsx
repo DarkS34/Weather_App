@@ -17,7 +17,7 @@ const WeatherNowOtherCities = () => {
 
   useEffect(() => {
     (async () => {
-      setWeatherData(null)
+      setWeatherData(null);
       try {
         const response = await axios(
           `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${ApiKey}&units=metric`
@@ -42,18 +42,16 @@ const WeatherNowOtherCities = () => {
           ))}
         </select>
       </label>
-      <div>
-        {error ? (
-          <p>{error}</p>
-        ) : !weatherData ? (
-          <div className="loading-container">
-            <Loading />
-            <p className="loading-data">Fetching data</p>
-          </div>
-        ) : (
-          <WeatherNowDetails data={weatherData} />
-        )}
-      </div>
+      {error ? (
+        <p>{error}</p>
+      ) : !weatherData ? (
+        <div className="loading-container">
+          <Loading />
+          <p className="loading-data">Fetching data</p>
+        </div>
+      ) : (
+        <WeatherNowDetails data={weatherData} />
+      )}
     </>
   );
 };

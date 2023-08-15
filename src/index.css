@@ -5,17 +5,19 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(
-    180deg,
-    rgb(192, 156, 122) 0%,
-    rgb(202, 134, 70) 100%
-  );
+  background: radial-gradient(circle, #00c6ff, #0072ff);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --primary-color: rgb(240, 240, 240);
+  --primary-color-shadow: rgba(240, 240, 240, 0.9);
+  --secondary-color: #0072ff;
+  --secondary-color-light: #00c6ff;
+  --background-card: rgba(49, 130, 223, 0.6);
 }
 
 a {

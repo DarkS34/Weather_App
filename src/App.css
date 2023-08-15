@@ -1,11 +1,3 @@
-:root {
-  --primary-color: rgb(240, 240, 240);
-  --primary-color-shadow: rgba(240, 240, 240, 0.9);
-  --secondary-orange: rgb(213, 122, 53);
-  --secondary-orange-shadow: rgba(213, 122, 53, 0.75);
-  --background-card: rgba(83, 83, 83, 0.6);
-}
-
 #root {
   margin: 0 auto;
   padding: 1rem;
@@ -13,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   min-width: 400px;
-  justify-content: start;
+  justify-content: center;
 }
 
 .loading-container {
@@ -50,12 +42,12 @@
   outline: none;
 }
 
-.not-found-container{
+.not-found-container {
   text-align: center;
   margin: auto;
 }
 
-.not-found-container > p:first-child{
+.not-found-container > p:first-child {
   font-size: 4rem;
   font-weight: 700;
 }

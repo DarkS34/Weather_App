@@ -40,7 +40,6 @@ const WeatherForecastOtherCities = () => {
           ))}
         </select>
       </label>
-      <div>
         {error ? (
           <p>{error}</p>
         ) : !weatherData ? (
@@ -48,7 +47,6 @@ const WeatherForecastOtherCities = () => {
         ) : (
           <WeatherForecastDetails data={weatherData} />
         )}
-      </div>
     </>
   );
 };

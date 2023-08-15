@@ -1,18 +1,10 @@
-:root {
-  --primary-color: rgb(240, 240, 240);
-  --primary-color-shadow: rgba(240, 240, 240, 0.9);
-  --secondary-orange: rgb(213, 122, 53);
-  --secondary-orange-shadow: rgba(213, 122, 53, 0.75);
-  --background-card: rgba(83, 83, 83, 0.6);
-}
-
 .weather-today-container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: scale-up 0.4s ease-out forwards;
-  width: 500px;
+  width: auto;
 }
 
 .weather-today-card {
@@ -25,9 +17,10 @@
   padding: 20px;
   border-radius: 10px;
   background-color: var(--background-card);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   width: 100%;
   transition: all 0.3s ease-in-out;
+  z-index: 3;
 }
 
 .date-time-container {
@@ -49,10 +42,6 @@
   justify-content: space-evenly;
   align-items: center;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
-}
-
-.weather-img {
-  filter: drop-shadow(0 0 10px rgb(200, 200, 200, 0.5));
 }
 
 .city-description-temp-container {
@@ -81,7 +70,7 @@
 .temp-container {
   display: flex;
   align-items: start;
-  color: var(--secondary-orange);
+  color: var(--primary-color);
 }
 
 .temp {
@@ -137,15 +126,42 @@
   }
 }
 
+.cloud {
+  animation: cloud-move 6s ease infinite;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  margin-top: -30px;
+  margin-left: -30px;
+  background: #ffffff;
+  height: 60px;
+  width: 60px;
+  box-shadow: #ffffff 65px -15px 0 -5px, #ffffff 25px -25px, #ffffff 30px 10px,
+    #ffffff 60px 15px 0 -10px, #ffffff 85px 5px 0 -5px;
+}
+
+.cloud:last-child {
+  top: 80%;
+  left: 20%;
+  animation-duration: 8s;
+}
+
+@keyframes cloud-move {
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .weather-today-container {
     width: 400px;
   }
-  .weather-now-details{
+  .weather-now-details {
     justify-content: space-evenly;
   }
 
-  .details-container{
+  .details-container {
     margin-inline: 0.75rem;
   }
 }

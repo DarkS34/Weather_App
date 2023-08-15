@@ -22,7 +22,11 @@ const WeatherNowDetails = ({ data }) => {
           </p>
         </div>
         <div className="basic-info">
-          <img src={weatherIcon} alt={data.weather[0].description} className="weather-img"/>
+          <img
+            src={weatherIcon}
+            alt={data.weather[0].description}
+            className="weather-img"
+          />
           <div className="city-description-temp-container">
             <h1 className="city-name">
               {data.name}, {data.sys.country}
@@ -132,9 +136,7 @@ const WeatherNowDetails = ({ data }) => {
               <path d="M11 13v2m0 3v2m4 -5v2m0 3v2" />
             </svg>
             <p className="details-description">Rain</p>
-            <p className="details-data">
-              {data.rain?.['1h'] || "0"} mm
-            </p>
+            <p className="details-data">{data.rain?.["1h"] || "0"} mm</p>
           </div>
           <div className="details-container rain-container">
             <svg
@@ -164,11 +166,13 @@ const WeatherNowDetails = ({ data }) => {
               <path d="M3.34 7l5.629 3.25l2.99 -1.738" />
             </svg>
             <p className="details-description">Snow</p>
-            <p className="details-data">
-              {data.snow?.['1h'] || "0"} mm
-            </p>
+            <p className="details-data">{data.snow?.["1h"] || "0"} mm</p>
           </div>
         </div>
+      </div>
+      <div className="clouds-container">
+        <span className="cloud"></span>
+        <span className="cloud"></span>
       </div>
     </div>
   );
