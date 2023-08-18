@@ -67,7 +67,7 @@ const WeatherNowDetails = ({ data }) => {
               height="36"
               viewBox="0 0 24 24"
               strokeWidth="1"
-              stroke="#f5f5f5"
+              stroke="#f0f0f0"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -88,7 +88,7 @@ const WeatherNowDetails = ({ data }) => {
               height="36"
               viewBox="0 0 24 24"
               strokeWidth="1"
-              stroke="#f5f5f5"
+              stroke="#f0f0f0"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -107,7 +107,7 @@ const WeatherNowDetails = ({ data }) => {
               height="36"
               viewBox="0 0 24 24"
               strokeWidth="1"
-              stroke="#f5f5f5"
+              stroke="#f0f0f0"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -126,7 +126,7 @@ const WeatherNowDetails = ({ data }) => {
               height="36"
               viewBox="0 0 24 24"
               strokeWidth="1"
-              stroke="#f5f5f5"
+              stroke="#f0f0f0"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -146,7 +146,7 @@ const WeatherNowDetails = ({ data }) => {
               height="36"
               viewBox="0 0 24 24"
               strokeWidth="1"
-              stroke="#f5f5f5"
+              stroke="#f0f0f0"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -171,6 +171,7 @@ const WeatherNowDetails = ({ data }) => {
         </div>
       </div>
       <div className="clouds-container">
+        <span className="cloud"></span>
         <span className="cloud"></span>
         <span className="cloud"></span>
       </div>

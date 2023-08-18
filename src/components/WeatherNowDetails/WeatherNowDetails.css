@@ -3,17 +3,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: scale-up 0.4s ease-out forwards;
   width: auto;
+  animation: rotation .5s ease-out forwards;
 }
 
 .weather-today-card {
   position: relative;
-  height: 500px;
+  height: max(320px, 45vh);
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px;
   border-radius: 10px;
   background-color: var(--background-card);
@@ -27,7 +28,6 @@
   display: flex;
   justify-content: space-between;
   width: 60%;
-  margin-bottom: 1rem;
 }
 
 .date,
@@ -41,7 +41,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
 }
 
 .city-description-temp-container {
@@ -87,7 +87,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-block-start: 2rem;
   flex-wrap: wrap;
 }
 
@@ -114,26 +113,12 @@
   margin-bottom: 0.5rem;
 }
 
-@keyframes scale-up {
-  0% {
-    scale: 0;
-  }
-  80% {
-    scale: 105%;
-  }
-  100% {
-    scale: 100%;
-  }
-}
-
 .cloud {
-  animation: cloud-move 6s ease infinite;
-  border-radius: 50%;
+  animation: cloud-move 6s ease-in-out infinite;
+  border-radius: 60%;
   position: absolute;
   top: 50%;
-  left: 60%;
-  margin-top: -30px;
-  margin-left: -30px;
+  left: 75%;
   background: #ffffff;
   height: 60px;
   width: 60px;
@@ -141,10 +126,24 @@
     #ffffff 60px 15px 0 -10px, #ffffff 85px 5px 0 -5px;
 }
 
-.cloud:last-child {
+.cloud:nth-child(2) {
+  top: 20%;
+  left: 10%;
+  animation-duration: 7s;
+}
+.cloud:nth-child(3) {
   top: 80%;
   left: 20%;
-  animation-duration: 8s;
+  animation-duration: 9s;
+}
+
+@keyframes rotation {
+  0% {
+    transform: scale(.75) perspective(1000px) rotateX(90deg);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes cloud-move {
@@ -153,15 +152,59 @@
   }
 }
 
+
+
 @media screen and (max-width: 768px) {
   .weather-today-container {
-    width: 400px;
+    width: 90%;
   }
+
+  .weather-today-card{
+    height: fit-content;
+    padding: 10px;
+  }
+
   .weather-now-details {
     justify-content: space-evenly;
   }
 
+  .basic-info{
+    border: none;
+  }
+  
+  .basic-info > img{
+    width: max(150px, 20vh);
+    max-width: 200px;
+  }
+
   .details-container {
     margin-inline: 0.75rem;
+  }
+
+  .details-icon{
+    width: max(28px, 4vh);
+  }
+
+  .details-container {
+    margin-inline: 1rem;
+    margin-bottom: .75rem;
+  }
+
+  .details-description{
+    font-size: max(2vw, 12px);
+    font-weight: 500;
+  }
+
+  .details-data{
+    font-size: max(1.5vw, 10px);
+  }
+
+  .cloud:nth-child(1) {
+    top: 50%;
+    left: 50%;
+  }
+  .cloud:nth-child(3) {
+    top: 80%;
+    left: 20%;
   }
 }
